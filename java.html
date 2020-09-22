@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function getUserCredentials(firstName, lastName, email) {
+             return ' ' + firstName + ' '+ lastName + ' '+  email;
+        }
+
+         const cartItems = [
+          { quantity: 1, price: 5 },
+          { quantity: 3, price: 4 },
+          { quantity: 10, price: 1}
+         ];
+
+         let total = 0;
+          for (const cartItem of cartItems) { 
+             total += cartItem.price * cartItem.quantity;
+         }
+
+
+         function getPreTaxTotal(x) {
+             console.log ('Your total is :');
+             return x;
+         }
+
+         function getTaxedTotal (taxes) {
+            console.log('Your total with taxes is');
+            return total * taxes;
+         }
+
+         console.log(getUserCredentials('Lucas', 'Moliterno', 'lucas.moliterno1@gmail.com'));
+         console.log(getPreTaxTotal(total));
+         console.log (getTaxedTotal(1.08));
+    </script>
+</html>
